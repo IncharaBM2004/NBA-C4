@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Instructions</title>
+    <style>
+        /* General Reset */
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 80vw;
+            height: 85vh;
+            padding: 20px 40px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 4px solid #124a8a;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructions {
+            width: 100%;
+            text-align: left;
+            font-size:small;
+            color: #124a8a;
+            margin-bottom: 5px;
+        }
+        
+        .instructions h3 {
+            text-decoration: underline;
+            color: #0f3970;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .instructions ul li {
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            padding-left: 40px;
+            margin-top: 10px;
+        }
+        
+        .sample-link {
+            display: block;
+            margin: 10px auto;
+            font-size: 1rem;
+            color: #124a8a;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #124a8a;
+            border-radius: 5px;
+            padding: 10px;
+            width: 60%;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        
+        .sample-link:hover {
+            background-color: #124a8a;
+            color: white;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .navigation-buttons a {
+            background-color: #124a8a;
+            color: white;
+            font-size:small;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+        
+        .navigation-buttons a:hover {
+            background-color: #0f3970;
+           
+        }
+        /* Scrolling Text Style */
+        
+        .scrolling-text {
+            color: #124a8a;
+            text-transform: uppercase;
+            overflow: hidden;
+            /* Hide overflow */
+            width: 100px
+            /* Full width of container */
+            
+        }
+        
+        .scrolling-text u {
+            position: absolute;
+            width: 50%;
+            /* This helps make sure the text can scroll out of view */
+            animation: scroll 10s linear infinite;
+        }
+        
+        @keyframes scroll {
+            from {
+                left: 100%;
+                /* Start off-screen */
+            }
+            to {
+                left: -100%;
+                /* End off-screen */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src=" https://tse1.mm.bing.net/th?id=OIP.ZA6tSS4o11eJKgyyzGBAtQHaHa&pid=Api " alt="NBA Logo " class="logo ">
+
+        <!-- Scrolling Text -->
+
+        <div class="instructions ">
+
+            <h3>Follow the Below Guidelines for Uploading:</h3>
+            <ul>
+                <li>The Excel files must follow the same column structure as the provided sample files.</li>
+                <li>Ensure there are no duplicate values within the uploaded Excel file.</li>
+                <li>Ensure there are no cell in excel is empty put 0 (if score not exsis )and no(if not pass or fail).</li>
+                <li>Files should be in <strong>.xlsx</strong> format and contain only valid data.</li>
+                <li>Upload the three files in the following order:
+                    <ol>
+                        <li><strong>Admission Details File:</strong><em> Name, Admission year, mode ...</em>.</li>
+                        <li><strong>Students File:</strong><em>Student ,year,department,id,score...</em>.</li>
+                        <li><strong>Company Info File:</strong><em>name,year, company name...</em>.</li>
+                    </ol>
+                </li>
+                <li>Ensure there are no mismatched columns or missing values.</li>
+            </ul>
+
+            <h3>Sample Files for Reference:</h3>
+            <a href="/media/_admission_details.xlsx " class="sample-link ">Download Admission Details Sample</a>
+            <a href="/media/mini project (5).xlsx " class="sample-link ">Download Students File Sample</a>
+            <a href="/media/comp_info1 (1).xlsx " class="sample-link ">Download Company Info Sample</a>
+        </div>
+
+        <div class="navigation-buttons ">
+            <a href="/upload/ ">Go to Upload Page</a>
+        </div>
+    </div>
+</body>
+
+</html>
